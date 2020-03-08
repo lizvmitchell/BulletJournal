@@ -14,11 +14,10 @@ Task.belongsTo(User)
 User.hasMany(Practice)
 Practice.belongsTo(User)
 
-//  Task.hasMany(Day);
-//  Day.belongsToMany(Task);
-
-//  Practice.hasMany(Day);
-//  Day.belongsToMany(Practice);
+Day.hasMany(Task)
+Task.belongsTo(Day)
+Day.hasMany(Practice)
+Practice.belongsTo(Day)
 
 /**
  * We'll export all of our models here, so that any time a module needs a model,
@@ -29,5 +28,6 @@ Practice.belongsTo(User)
 module.exports = {
   User,
   Task,
-  Practice
+  Practice,
+  Day
 }

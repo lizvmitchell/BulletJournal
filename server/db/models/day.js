@@ -3,26 +3,23 @@ const db = require('../db')
 
 const Day = db.define('day', {
   date: {
-    type: Sequelize.DATE,
-    allowNull: false
+    type: Sequelize.DATE
   },
   dayName: {
-    type: Sequelize.STRING,
-    allowNull: false
+    type: Sequelize.STRING
   },
-  calenderDay: {
+  day: {
     type: Sequelize.INTEGER,
     allowNull: false
   },
   monthName: {
-    type: Sequelize.STRING,
-    allowNull: false
+    type: Sequelize.STRING
   },
-  calendarMonth: {
+  month: {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  calendarYear: {
+  year: {
     type: Sequelize.INTEGER,
     allowNull: false
   }

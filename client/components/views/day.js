@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, {ThemeProvider} from 'styled-components'
+import {connect} from 'react-redux'
 
 const DayContainer = styled.div`
   font-family: helvetica;
@@ -9,7 +10,7 @@ const DayContainer = styled.div`
 `
 
 const Gutter = styled.div`
-  width: 5vw;
+  width: 10vw;
 `
 
 const TaskPracticeContainer = styled(DayContainer)`
@@ -18,27 +19,29 @@ const TaskPracticeContainer = styled(DayContainer)`
 `
 
 const JournalContainer = styled(DayContainer)`
+  flex-direction: column;
   font-size: 1.6em;
-  margin: 100px;
   text-align: center;
   border-bottom: 0.2em solid maroon;
 `
 const PracticeContainer = styled(DayContainer)`
   font-size: 1.6em;
   border-bottom: 0.2em solid maroon;
+  width: 100%;
 `
 
 const TaskContainer = styled(DayContainer)`
   font-size: 1.6em;
   border-bottom: 0.2em solid maroon;
+  width: 100%;
 `
 
 const TaskList = styled.ul`
-  margin: auto 50px;
+  width: 100%;
 `
 
 const PracticeList = styled.ul`
-  margin: auto 50px;
+  width: 100%;
 `
 
 class Day extends React.Component {
